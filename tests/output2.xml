@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.12.10 on win32)" generated="2026-06-13T01:47:45.940876" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste Exame" source="C:\Users\eduar\Downloads\VitaLink-main\VitaLink-main\front\tests\teste_exame.robot">
+<test id="s1-t1" name="CT01 — Liberação de exame existente" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-13T01:47:46.192716" level="INFO">Opening browser 'firefox' to base url 'http://localhost:5173'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-13T01:47:46.192716" elapsed="6.138070"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-13T01:47:52.331790" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Atendente da Clínica')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Atendente da Clínica')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T01:47:52.331790" elapsed="0.117388"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-13T01:47:52.450223" level="INFO">Selecting options from selection list 'xpath=//div[contains(@class, 'mini-action')]//select' by value usr_atendente.</msg>
+<msg time="2026-06-13T01:47:52.483223" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-06-13T01:47:52.483223" level="FAIL">List with locator 'xpath=//div[contains(@class, 'mini-action')]//select' not found.</msg>
+<arg>xpath=//div[contains(@class, 'mini-action')]//select</arg>
+<arg>usr_atendente</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="FAIL" start="2026-06-13T01:47:52.450223" elapsed="0.039995">List with locator 'xpath=//div[contains(@class, 'mini-action')]//select' not found.</status>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//article[.//strong[contains(text(), 'Glicemia de jejum')]]//button[contains(text(), 'Liberar')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-06-13T01:47:52.490218" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Resultado liberado para familiares</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2026-06-13T01:47:52.491216" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>ct01_exame_liberado.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-06-13T01:47:52.491216" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-06-13T01:47:52.492220" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-06-13T01:47:46.191719" elapsed="6.300501">List with locator 'xpath=//div[contains(@class, 'mini-action')]//select' not found.</status>
+</test>
+<test id="s1-t2" name="CT02 — Exame já liberado não aparece na lista" line="18">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-13T01:47:52.494219" level="INFO">Opening browser 'firefox' to base url 'http://localhost:5173'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-13T01:47:52.493216" elapsed="6.012945"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-13T01:47:58.506161" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Atendente da Clínica')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Atendente da Clínica')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T01:47:58.506161" elapsed="0.131223"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2026-06-13T01:47:58.641390" level="INFO">Current page does not contain element 'xpath=//article[.//strong[contains(text(), 'Glicemia de jejum')]]'.</msg>
+<arg>xpath=//article[.//strong[contains(text(), 'Glicemia de jejum')]]</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2026-06-13T01:47:58.637384" elapsed="0.004006"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-13T01:47:58.691419" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="ct02_exame_removido.png"&gt;&lt;img src="ct02_exame_removido.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>ct02_exame_removido.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-13T01:47:58.641390" elapsed="0.050029"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-13T01:47:58.692423" elapsed="2.847495"/>
+</kw>
+<status status="PASS" start="2026-06-13T01:47:52.493216" elapsed="9.046702"/>
+</test>
+<status status="FAIL" start="2026-06-13T01:47:45.941876" elapsed="15.601060"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Teste Exame" id="s1" pass="1" fail="1" skip="0">Teste Exame</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
