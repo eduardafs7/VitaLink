@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.12.10 on win32)" generated="2026-06-13T00:53:23.199979" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste Familiar" source="C:\Users\eduar\Downloads\VitaLink-main\VitaLink-main\front\tests\teste_familiar.robot">
+<test id="s1-t1" name="CT01 — Vínculo dentro do limite" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:23.740158" level="INFO">Opening browser 'firefox' to base url 'http://localhost:5173'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-13T00:53:23.740158" elapsed="6.953463"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:30.694621" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Atendente da Clínica')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Atendente da Clínica')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:30.694621" elapsed="0.135723"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:30.832350" level="INFO">Selecting options from selection list 'xpath=//label[contains(text(), 'Paciente')]/select' by label João Pereira (pat_joao).</msg>
+<arg>xpath=//label[contains(text(), 'Paciente')]/select</arg>
+<arg>João Pereira (pat_joao)</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-06-13T00:53:30.831346" elapsed="0.104419"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:30.936763" level="INFO">Typing text 'Lucas Oliveira' into text field 'xpath=//label[contains(text(), 'Nome do familiar')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'Nome do familiar')]/input</arg>
+<arg>Lucas Oliveira</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:30.935765" elapsed="0.141248"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:31.078069" level="INFO">Typing text '77788898900' into text field 'xpath=//label[contains(text(), 'CPF')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'CPF')]/input</arg>
+<arg>77788898900</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:31.077013" elapsed="0.067106"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:31.145119" level="INFO">Typing text 'Filho' into text field 'xpath=//label[contains(text(), 'Parentesco')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'Parentesco')]/input</arg>
+<arg>Filho</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:31.145119" elapsed="0.063948"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:31.209067" level="INFO">Typing text 'lucas@example.com' into text field 'xpath=//label[contains(text(), 'E-mail')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'E-mail')]/input</arg>
+<arg>lucas@example.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:31.209067" elapsed="0.138387"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:31.348454" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Vincular familiar')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Vincular familiar')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:31.347454" elapsed="0.151471"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:31.517929" level="INFO">Current page contains text 'Familiar vinculado ao paciente.'.</msg>
+<arg>Familiar vinculado ao paciente.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-06-13T00:53:31.498925" elapsed="0.020006"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:31.573962" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="ct01_sucesso.png"&gt;&lt;img src="ct01_sucesso.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>ct01_sucesso.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-13T00:53:31.518931" elapsed="0.056030"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-13T00:53:31.574961" elapsed="2.756425"/>
+</kw>
+<status status="PASS" start="2026-06-13T00:53:23.739158" elapsed="10.593226"/>
+</test>
+<test id="s1-t2" name="CT02 — Tentativa de vincular o 6º familiar" line="22">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:34.337384" level="INFO">Opening browser 'firefox' to base url 'http://localhost:5173'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-13T00:53:34.336384" elapsed="6.564159"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:40.901539" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Atendente da Clínica')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Atendente da Clínica')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:40.901539" elapsed="0.128230"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:41.030766" level="INFO">Selecting options from selection list 'xpath=//label[contains(text(), 'Paciente')]/select' by label Maria Oliveira (pat_maria).</msg>
+<arg>xpath=//label[contains(text(), 'Paciente')]/select</arg>
+<arg>Maria Oliveira (pat_maria)</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-06-13T00:53:41.030766" elapsed="0.098684"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:41.130435" level="INFO">Typing text 'Familiar 11111111111' into text field 'xpath=//label[contains(text(), 'Nome do familiar')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'Nome do familiar')]/input</arg>
+<arg>Familiar ${cpf}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:41.130435" elapsed="0.093755"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:41.225194" level="INFO">Typing text '11111111111' into text field 'xpath=//label[contains(text(), 'CPF')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'CPF')]/input</arg>
+<arg>${cpf}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:41.224190" elapsed="0.063014"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:41.287204" level="INFO">Typing text 'Parente' into text field 'xpath=//label[contains(text(), 'Parentesco')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'Parentesco')]/input</arg>
+<arg>Parente</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:41.287204" elapsed="0.036925"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:41.325129" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Vincular familiar')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Vincular familiar')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:41.324129" elapsed="0.068544"/>
+</kw>
+<var name="${cpf}">11111111111</var>
+<status status="PASS" start="2026-06-13T00:53:41.130435" elapsed="0.263240"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:41.396682" level="INFO">Typing text 'Familiar 22222222222' into text field 'xpath=//label[contains(text(), 'Nome do familiar')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'Nome do familiar')]/input</arg>
+<arg>Familiar ${cpf}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:41.395670" elapsed="0.102772"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:41.499442" level="INFO">Typing text '22222222222' into text field 'xpath=//label[contains(text(), 'CPF')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'CPF')]/input</arg>
+<arg>${cpf}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:41.498442" elapsed="0.095542"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:41.593984" level="INFO">Typing text 'Parente' into text field 'xpath=//label[contains(text(), 'Parentesco')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'Parentesco')]/input</arg>
+<arg>Parente</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:41.593984" elapsed="0.088616"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:41.683601" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Vincular familiar')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Vincular familiar')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:41.683601" elapsed="0.143663"/>
+</kw>
+<var name="${cpf}">22222222222</var>
+<status status="PASS" start="2026-06-13T00:53:41.394677" elapsed="0.432587"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:41.828832" level="INFO">Typing text 'Familiar 33333333333' into text field 'xpath=//label[contains(text(), 'Nome do familiar')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'Nome do familiar')]/input</arg>
+<arg>Familiar ${cpf}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:41.827822" elapsed="0.117741"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:41.946560" level="INFO">Typing text '33333333333' into text field 'xpath=//label[contains(text(), 'CPF')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'CPF')]/input</arg>
+<arg>${cpf}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:41.946560" elapsed="0.088470"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:42.035030" level="INFO">Typing text 'Parente' into text field 'xpath=//label[contains(text(), 'Parentesco')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'Parentesco')]/input</arg>
+<arg>Parente</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:42.035030" elapsed="0.035825"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:42.070855" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Vincular familiar')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Vincular familiar')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:42.070855" elapsed="0.114418"/>
+</kw>
+<var name="${cpf}">33333333333</var>
+<status status="PASS" start="2026-06-13T00:53:41.827822" elapsed="0.357451"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:42.185273" level="INFO">Typing text 'Familiar 44444444444' into text field 'xpath=//label[contains(text(), 'Nome do familiar')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'Nome do familiar')]/input</arg>
+<arg>Familiar ${cpf}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:42.185273" elapsed="0.067758"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:42.254034" level="INFO">Typing text '44444444444' into text field 'xpath=//label[contains(text(), 'CPF')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'CPF')]/input</arg>
+<arg>${cpf}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:42.254034" elapsed="0.063617"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:42.318663" level="INFO">Typing text 'Parente' into text field 'xpath=//label[contains(text(), 'Parentesco')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'Parentesco')]/input</arg>
+<arg>Parente</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:42.317651" elapsed="0.039610"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:42.358275" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Vincular familiar')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Vincular familiar')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:42.358275" elapsed="0.065446"/>
+</kw>
+<var name="${cpf}">44444444444</var>
+<status status="PASS" start="2026-06-13T00:53:42.185273" elapsed="0.239446"/>
+</iter>
+<var>${cpf}</var>
+<value>11111111111</value>
+<value>22222222222</value>
+<value>33333333333</value>
+<value>44444444444</value>
+<status status="PASS" start="2026-06-13T00:53:41.130435" elapsed="1.294284"/>
+</for>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:42.425718" level="INFO">Typing text 'Familiar Excedente' into text field 'xpath=//label[contains(text(), 'Nome do familiar')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'Nome do familiar')]/input</arg>
+<arg>Familiar Excedente</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:42.425718" elapsed="0.083550"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:42.510268" level="INFO">Typing text '99988877766' into text field 'xpath=//label[contains(text(), 'CPF')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'CPF')]/input</arg>
+<arg>99988877766</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:42.510268" elapsed="0.053548"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:42.564802" level="INFO">Typing text 'Sobrinho' into text field 'xpath=//label[contains(text(), 'Parentesco')]/input'.</msg>
+<arg>xpath=//label[contains(text(), 'Parentesco')]/input</arg>
+<arg>Sobrinho</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:42.563816" elapsed="0.081371"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:42.646186" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Vincular familiar')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Vincular familiar')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-13T00:53:42.646186" elapsed="0.075357"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:42.733546" level="INFO">Current page contains text 'Limite de familiares atingido'.</msg>
+<arg>Limite de familiares atingido</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-06-13T00:53:42.721543" elapsed="0.012003"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-13T00:53:42.779742" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="ct02_erro.png"&gt;&lt;img src="ct02_erro.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>ct02_erro.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-13T00:53:42.735544" elapsed="0.045732"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-13T00:53:42.782307" elapsed="2.670840"/>
+</kw>
+<status status="PASS" start="2026-06-13T00:53:34.334384" elapsed="11.120744"/>
+</test>
+<status status="PASS" start="2026-06-13T00:53:23.202990" elapsed="22.253137"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Teste Familiar" id="s1" pass="2" fail="0" skip="0">Teste Familiar</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
